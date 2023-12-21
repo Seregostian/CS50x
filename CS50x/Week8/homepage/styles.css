@@ -1,0 +1,201 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-image: url('https://i.imgur.com/mCuuNH5.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ADD8E6; /* Dark text color */
+}
+
+header {
+  background-color: transparent; /* Set to transparent */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin-right: 10px; /* Adjust the spacing between buttons */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold letters */
+    background-color: #007bff; /* Dark gray background color for buttons */
+    padding: 10px 15px; /* Adjust padding to add space around the text */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+section.welcome {
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+}
+
+section h2 {
+  color: #007bff; /* Bootstrap's primary color */
+}
+
+section p {
+  color: #555; /* Dark gray text color */
+}
+
+section.about-us,
+section.our-deals,
+section.news,
+section.contact {
+  padding: 2rem;
+  background-color: #ffffff; /* White background */
+}
+
+button.cta-button {
+  background-color: #007bff; /* Bootstrap's primary color */
+  color: #fff; /* White text color */
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+button.cta-button a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+}
+
+footer {
+  background-color: #343a40; /* Dark gray background */
+  color: #fff; /* White text color */
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  header {
+    font-size: 0.8em;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+ul.cta-buttons {
+    list-style: none;
+    text-align: center; /* Center the buttons */
+  }
+
+  ul.cta-buttons li {
+    display: inline-block; /* Display buttons in a horizontal line */
+    margin-right: 10px; /* Adjust the spacing between buttons */
+  }
+
+  .full-page-scroll {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    background-image: url(''); /* Replace with the path to your animation */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.page {
+    height: 100vh;
+    padding: 2rem;
+    scroll-snap-align: start;
+    background-color: transparent; /* Make the pages transparent to see the background animation */
+    scroll-snap-stop: always; /* Ensure smooth scrolling and snapping */
+}
+
+body {
+    font-family: 'Helvetica', Arial, sans-serif; /* Default font for the entire body */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Main font for titles */
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Helvetica', Arial, sans-serif; /* Secondary font for paragraphs */
+    font-weight: 500;
+}
+
+footer {
+    font-family: 'Raleway', Arial, sans-serif; /* Disclaimer font for the footer */
+    font-weight: 400;
+
+  }
+
+  .banner-image {
+    max-width: 86%; /* Set maximum width to 86% */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image is a block element */
+    margin: auto; /* Center the image horizontally */
+}
+
+
+/* Additional styling for each page if needed */
+.menu-container {
+  display: flex;
+  justify-content: space-around; /* Adjust the spacing between menus */
+  flex-wrap: wrap; /* Allow menus to wrap to the next line if needed */
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: auto; /* Center the container */
+}
+
+#mission,
+#achievements,
+#clients {
+  flex: 0 0 calc(33.33% - 2rem); /* Distribute available space equally among menus with 2rem margin */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px; /* Set a maximum width for each menu */
+  margin: 1rem;
+}
+
+#mission .content,
+#achievements .content,
+#clients .content {
+  max-width: 100%;
+  text-align: center;
+}
+
+#mission img,
+#achievements img,
+#clients img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+

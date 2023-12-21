@@ -1,0 +1,45 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It was the fastest on the sorted list (SEE DATA BELOW)
+
+sort2 uses: Merge Sort
+
+How do you know?: Fastest one on the random5000 list (AGAIN, SEE DATA BELOW)
+
+sort3 uses: Selection Sort
+
+How do you know?: Only option left, i got merge first, bubble second.
+
+----------------------------------------------------
+
+sort1 random5000 time:
+real 0m0.075s
+user 0m0.033s
+sys  0m0.030s
+
+sort2 random5000 time:
+real 0m0.073s
+user 0m0.000s
+sys  0m0.035s
+
+sort3 random5000 time:
+real 0m0.087s
+user 0m0.016s
+sys  0m0.035s
+
+----------------------------------------------------
+
+sort1 sorted5000 time:
+real 0m0.038s
+user 0m0.006s
+sys  0m0.024s
+
+sort2 sorted5000 time:
+real 0m0.041s
+user 0m0.004s
+sys  0m0.028s
+
+sort3 sorted5000 time:
+real 0m0.049s
+user 0m0.015s
+sys  0m0.031s

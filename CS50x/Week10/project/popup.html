@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CS50 Notifier</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>It's Malan Time!</h2>
+
+  <div id="video-info">
+    <p id="video-title"></p>
+
+    <img id="video-thumbnail" src="" alt="Video thumbnail">
+  </div>
+
+  <script>
+    chrome.storage.local.get('latestVideo', (data) => {
+      const video = data.latestVideo;
+      if (video) {
+        document.getElementById('video-title').textContent = video.snippet.title;
+        document.getElementById('video-thumbnail').src = video.snippet.thumbnails.high.url;
+      }
+    });
+  </script>
+</body>
+</html>

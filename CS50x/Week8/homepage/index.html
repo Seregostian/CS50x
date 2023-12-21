@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franton Inc.</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+
+    <style>
+        #mission img,
+        #achievements img,
+        #clients img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo -->
+        <h1>Franton - Leading the Way in Infrastructure Services</h1>
+    </header>
+
+    <section class="banner">
+        <img src="https://i.imgur.com/yp1iv5h.png" alt="Banner Image" class="banner-image">
+    </section>
+
+    <section class="subbuttons">
+        <!-- Subtitle buttons -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ourdeals.html">Our Deals</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="background-image">
+        <div class="image-container"></div>
+    </section>
+
+    <section class="full-page-scroll">
+        <div class="page" id="mission">
+            <div class="content">
+                <h2>Our Mission</h2>
+                <p>Since its establishment, Franton has been committed to delivering highly customizable and dependable software solutions tailored to meet your diverse entrepreneurial requirements. Whether you operate a large corporation, a burgeoning startup, an e-commerce enterprise, or seek to enhance the promotion of your products, we have your needs comprehensively addressed.</p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/A9PbQJQ.png" alt="Mission Image">
+            </div>
+        </div>
+
+        <div class="page" id="achievements">
+            <div class="content">
+                <h2>Our Achievements</h2>
+                <p>"Franton consistently excels in delivering premier infrastructure services to the market. Our robust software and proficient professionals are precisely what you need to accomplish your goals.</p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/WqGSPkG.png" alt="Achievements Image">
+            </div>
+        </div>
+
+        <div class="page" id="clients">
+            <div class="content">
+                <h2>Our Clients</h2>
+                <p>We have forged partnerships with highly capable and like-minded individuals to ensure a sustained relationship founded on respect, responsibility, and, most importantly, <strong>results</strong>.</p>
+            </div>
+            <div class="image">
+                <img src="https://i.imgur.com/cfb73VI.png" alt="Clients Image">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <ul class="cta-buttons">
+            <li><button class="cta-button"><a href="ourdeals.html">Explore Our Services</a></button></li>
+            <li><button class="cta-button"><a href="news.html">Stay Updated with Our News</a></button></li>
+            <li><button class="cta-button"><a href="contact.html">Connect with us</a></button></li>
+            <li><button class="cta-button"><a href="about.html">Greet the team</a></button></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Franton. All rights reserved.</p>
+    </footer>
+
+    <!-- Dependencies: -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- JS here: -->
+
+    <script>
+            const pages = document.querySelectorAll('.page');
+            let userScrolling = true;
+            let scrollTimeout;
+
+            document.addEventListener('scroll', () => {
+                if (userScrolling) {
+                    const scrollPosition = window.scrollY;
+
+                    pages.forEach((page, index) => {
+                        const offsetTop = page.offsetTop;
+
+                        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + page.offsetHeight) {
+                            window.location.hash = `#${page.id}`;
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener('wheel', () => {
+                userScrolling = true;
+            });
+
+            document.addEventListener('keydown', () => {
+                userScrolling = true;
+            });
+
+            document.addEventListener('scroll', () => {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    userScrolling = false;
+                }, 200);
+            });
+    </script>
+
+</body>
+
+</html>

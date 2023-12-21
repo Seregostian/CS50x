@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<style>
+  .quoted-table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .quoted-table th, .quoted-table td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+  }
+
+  .quoted-table th {
+    background-color: #eee;
+    font-weight: bold;
+  }
+
+  .quoted-table td.value {
+    text-align: right;
+  }
+</style>
+
+<table>
+  <tr class="quoted-table">
+    <th>Name</th>
+    <th>Value</th>
+    <th>Symbol</th>
+  </tr>
+  <tr class="quoted-table">
+    <td>{{ stock.name }}</td>
+    <td class="value">{{ usd(stock.price) }}</td>
+    <td>{{ stock.symbol }}</td>
+  </tr>
+</table>
+
+{% endblock %}
