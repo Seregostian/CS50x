@@ -2,7 +2,7 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('background.js');
   }
   
-  const CS50_CHANNEL_ID = 'UCcabW7890RKJzL968QWEykA';
+  const CS50_CHANNEL_ID = 'CHANNEL ID GOES HERE';
   const LAST_VIDEO_KEY = 'last_video_id';
   
   function checkForNewVideos() {
