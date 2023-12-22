@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
   
   function checkForNewVideos() {
     chrome.storage.local.get(LAST_VIDEO_KEY, ({ lastVideoId }) => {
-      const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CcabW7890RKJzL968QWEykA}&maxResults=10&order=date&key=${AIzaSyCARA0dYfCiq9NnDoHHFMGRUIZH2qQXQr0}`;
+      const url = `YOUR URL HERE'
   
       fetch(url)
         .then(response => response.json())
